@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PC3uFsSHIhaUjBGLx4ZVw0UnLlXlef/2BAk+zmU41NMxE2fjOlI2eDmeoduQPhh40HxleV8nhkRJwmFmR2j1RQ==",
+  "dgSpecHash": "1yc9IuxWn0BZrPkvTK72KBjhrRhXPZetDxwppFKJlWiumEKnNqSgabgxgMM1jDR7gtr5jGS47RRpEhXhZ9yRGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sarah.omoike\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\sarah.omoike\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\sarah.omoike\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\sarah.omoike\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gD6n9StatKuy2n3xj2c4Jqyq4YkuIzxNhsL9TigO935o7Hqtaz7J+t8c34T1ydSSj+PSSifqCGO+zxACETFbcA==",
+  "dgSpecHash": "HIivS7KdZYLqsnkBOKUJf1FvTlT50wK3/9gcFtcggz0+vU2/4YZ/C9PGWaV5IUwfsrV8ukQChY19RkXb81grdA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\ApplicationServices\\ApplicationServices.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sarah.omoike\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\sarah.omoike\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.27\\microsoft.entityframeworkcore.6.0.27.nupkg.sha512",
     "C:\\Users\\sarah.omoike\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.27\\microsoft.entityframeworkcore.abstractions.6.0.27.nupkg.sha512",
     "C:\\Users\\sarah.omoike\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.27\\microsoft.entityframeworkcore.analyzers.6.0.27.nupkg.sha512",
