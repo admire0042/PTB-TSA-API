@@ -1,0 +1,280 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\PTB-TSA-BackendService\\PTB-TSA-BackendService.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\ApplicationServices\\ApplicationServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\ApplicationServices\\ApplicationServices.csproj",
+        "projectName": "ApplicationServices",
+        "projectPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\ApplicationServices\\ApplicationServices.csproj",
+        "packagesPath": "C:\\Users\\sarah.omoike\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\ApplicationServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sarah.omoike\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.27, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\sarah.omoike\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sarah.omoike\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Persistence\\Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Persistence\\Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\sarah.omoike\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sarah.omoike\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\ApplicationServices\\ApplicationServices.csproj": {
+                "projectPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\ApplicationServices\\ApplicationServices.csproj"
+              },
+              "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.26, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\PTB-TSA-BackendService\\PTB-TSA-BackendService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\PTB-TSA-BackendService\\PTB-TSA-BackendService.csproj",
+        "projectName": "PTB-TSA-BackendService",
+        "projectPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\PTB-TSA-BackendService\\PTB-TSA-BackendService.csproj",
+        "packagesPath": "C:\\Users\\sarah.omoike\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\PTB-TSA-BackendService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sarah.omoike\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Persistence\\Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
