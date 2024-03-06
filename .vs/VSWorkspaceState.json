@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ApplicationServices\\bin",
+    "\\ApplicationServices\\DTOs",
+    "\\Persistence\\bin",
+    "\\Persistence\\bin\\Debug",
+    "\\Persistence\\bin\\Release"
   ],
-  "SelectedNode": "\\C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService",
+  "SelectedNode": "\\Shared",
   "PreviewInSolutionExplorer": false
 }
