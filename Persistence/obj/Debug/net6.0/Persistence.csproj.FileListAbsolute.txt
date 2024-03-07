@@ -19,3 +19,4 @@ C:\Users\sarah.omoike\Desktop\Projects\Backend_Projects\PremiumTrustBank.TSA.Bac
 C:\Users\sarah.omoike\Desktop\Projects\Backend_Projects\PremiumTrustBank.TSA.BackendService\Persistence\bin\Debug\net6.0\Shared.dll
 C:\Users\sarah.omoike\Desktop\Projects\Backend_Projects\PremiumTrustBank.TSA.BackendService\Persistence\bin\Debug\net6.0\Shared.pdb
 C:\Users\sarah.omoike\Desktop\Projects\Backend_Projects\PremiumTrustBank.TSA.BackendService\Persistence\obj\Debug\net6.0\Persistence.genruntimeconfig.cache
+C:\Users\sarah.omoike\Desktop\Projects\Backend_Projects\PremiumTrustBank.TSA.BackendService\Persistence\bin\Debug\net6.0\appsettings.json
