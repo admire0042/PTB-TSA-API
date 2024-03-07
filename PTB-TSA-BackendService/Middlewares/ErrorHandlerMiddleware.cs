@@ -1,8 +1,9 @@
-﻿using System.Net;
-using System.Net.Mime;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Shared.BaseResponse;
 using Shared.Exceptions;
+using System.Net;
+using System.Net.Mime;
+
 
 namespace Api.Middleware
 {

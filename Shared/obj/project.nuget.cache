@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "HElBq35gfOZagX1vfiAmI8/abwGTeVPHZW8qnK0doJDQccBT2ISnLr9MaWhfJ276cJPsJxCcpWuIQUjnS2xFAw==",
+  "dgSpecHash": "rX+ouFL2anBqRc8Znbx6BcU0QVX4xrufO3fYe0oRqi61mTQqKiBEcDcTtY2u947+89G88B8snQ0MEF0GFPRbag==",
   "success": true,
   "projectFilePath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Shared\\Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sarah.omoike\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\sarah.omoike\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "sT6dwiS2b2bMH/4jtbuMrhusO473YAe9umLVQgWgxPc=",
+  "Source": "PTB-TSA-BackendService",
+  "BasePath": "_content/PTB-TSA-BackendService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

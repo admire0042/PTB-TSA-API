@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PTB-TSA-BackendService.props" />
+</Project>

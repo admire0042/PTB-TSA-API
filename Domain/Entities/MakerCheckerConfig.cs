@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class MakerCheckerConfig: Entity
+    public class MakerCheckerConfig
     {
         public string statusDescription { get; set; }
         public string StatusCode { get; set; }

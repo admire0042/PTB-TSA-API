@@ -8,7 +8,6 @@ namespace Persistence.DBContexts
     public class AppDbContext : DbContext, IAppDbContext
     {
         public DbSet<TSAReport> TSAReports { get; set; }
-        public DbSet<NiBSSTSAReport> NiBSSTSAReports { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {

@@ -11,7 +11,6 @@ namespace Domain.Entities
             public Guid Id { get; set; }
             public string RequestId { get; set; }
             public string BankId { get; set; }
-            public string NibssSettlementRef { get; set; }
             public string UniqueReference { get; set; }
             public string BankBranchId { get; set; }
             public string BatchId { get; set; }
@@ -44,8 +43,8 @@ namespace Domain.Entities
             public decimal? RequestedAmount { get; set; }
             public int? SessionId { get; set; }
             public string SettlementRef { get; set; }
-            public string PcCodeName { get; set; }
-            public string PcCodeRef { get; set; }
+            public string TsaPcCodename { get; set; }
+            public string TsaPcCoderef { get; set; }
             public DateTime? ValueDate { get; set; }
             public string Payer { get; set; }
             public DateTime? TransmittedDate { get; set; }
@@ -57,7 +56,6 @@ namespace Domain.Entities
             {
                 RequestId = report.RequestId,
                 BankId = report.BankId,
-                NibssSettlementRef = report.NibssSettlementRef,
                 UniqueReference = report.UniqueReference,
                 BankBranchId = report.BankBranchId,
                 BatchId = report.BatchId,
@@ -89,8 +87,8 @@ namespace Domain.Entities
                 RequestedAmount = report.RequestedAmount,
                 SessionId = report.SessionId,
                 SettlementRef = report.SettlementRef,
-                PcCodeName = report.PcCodeName,
-                PcCodeRef = report.PcCodeRef,
+                TsaPcCodename = report.TsaPcCodename,
+                TsaPcCoderef = report.TsaPcCoderef,
                 ValueDate = report.ValueDate,
                 Payer = report.Payer,
                 TransmittedDate = report.TransmittedDate,
