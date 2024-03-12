@@ -48,7 +48,21 @@ namespace Domain.Entities
             public DateTime? ValueDate { get; set; }
             public string Payer { get; set; }
             public DateTime? TransmittedDate { get; set; }
-            public MakerCheckerConfig checkerConfig { get; set; }
+        public string ConfigId { get; set; }
+        public string StatusDescription { get; set; }
+        public string StatusCode { get; set; }
+        public string Initiatedby { get; set; }
+        public string InitiatorBranch { get; set; }
+        public DateTime? InitiatedDate { get; set; }
+        public string? Authorizedby { get; set; }
+        public string? AuthorizerComment { get; set; }
+        public bool? IsAuthorized { get; set; } = false;
+        public DateTime? AuthorizedDate { get; set; }
+        public bool? IsSuperAuthorized { get; set; } = false;
+        public string? SuperAuthorizerComment { get; set; }
+        public string? SuperAuthorizedby { get; set; }
+        public DateTime? SuperAuthorizedDate { get; set; }
+        //public MakerCheckerConfig checkerConfig { get; set; }
 
         public static TSAReport Create(TSAReport report)
         {
@@ -92,7 +106,7 @@ namespace Domain.Entities
                 ValueDate = report.ValueDate,
                 Payer = report.Payer,
                 TransmittedDate = report.TransmittedDate,
-                checkerConfig = report.checkerConfig
+                //checkerConfig = report.checkerConfig
             };
         }
 

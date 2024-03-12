@@ -58,20 +58,20 @@ namespace Persistence.Configurations
             builder.Property(x => x.payColDate).HasColumnType("varchar(100)");
             builder.Property(x => x.Channel).HasColumnType("varchar(100)");
 
-            builder.Property(x => x.checkerConfig.statusDescription).HasColumnType("varchar(100)");
-            builder.Property(x => x.checkerConfig.StatusCode).HasColumnType("varchar(100)");
-            builder.Property(x => x.checkerConfig.Initiatedby).HasColumnType("varchar(100)");
-            builder.Property(x => x.checkerConfig.InitiatorBranch).HasColumnType("varchar(100)");
-            builder.Property(x => x.checkerConfig.InitiatedDate).HasColumnType("Date");
+            builder.Property(x => x.StatusDescription).HasColumnType("varchar(100)");
+            builder.Property(x => x.StatusCode).HasColumnType("varchar(100)");
+            builder.Property(x => x.Initiatedby).HasColumnType("varchar(100)");
+            builder.Property(x => x.InitiatorBranch).HasColumnType("varchar(100)");
+            builder.Property(x => x.InitiatedDate).HasColumnType("Date");
 
-            builder.Property(x => x.checkerConfig.Authorizedby).HasColumnType("varchar(100)");
-            builder.Property(x => x.checkerConfig.AuthorizerComment).HasColumnType("varchar(100)");
-            builder.Property(x => x.checkerConfig.IsAuthorized).HasColumnType("varchar(100)");
-            builder.Property(x => x.checkerConfig.AuthorizedDate).HasColumnType("Date");
-            builder.Property(x => x.checkerConfig.IsSuperAuthorized).HasColumnType("Bit");
-            builder.Property(x => x.checkerConfig.SuperAuthorizerComment).HasColumnType("varchar(100)");
-            builder.Property(x => x.checkerConfig.SuperAuthorizedby).HasColumnType("varchar(100)");
-            builder.Property(x => x.checkerConfig.SuperAuthorizedDate).HasColumnType("Date");
+            builder.Property(x => x.Authorizedby).HasColumnType("varchar(100)");
+            builder.Property(x => x.AuthorizerComment).HasColumnType("varchar(100)");
+            builder.Property(x => x.IsAuthorized).HasColumnType("varchar(100)");
+            builder.Property(x => x.AuthorizedDate).HasColumnType("Date");
+            builder.Property(x => x.IsSuperAuthorized).HasColumnType("Bit");
+            builder.Property(x => x.SuperAuthorizerComment).HasColumnType("varchar(100)");
+            builder.Property(x => x.SuperAuthorizedby).HasColumnType("varchar(100)");
+            builder.Property(x => x.SuperAuthorizedDate).HasColumnType("Date");
 
         }
     }

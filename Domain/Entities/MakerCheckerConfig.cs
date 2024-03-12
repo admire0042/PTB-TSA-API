@@ -8,7 +8,8 @@ namespace Domain.Entities
 {
     public class MakerCheckerConfig
     {
-        public string statusDescription { get; set; }
+        public string ConfigId { get; set; }
+        public string StatusDescription { get; set; }
         public string StatusCode { get; set; }
         public string Initiatedby { get; set; }
         public string InitiatorBranch { get; set; }

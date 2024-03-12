@@ -16,11 +16,11 @@ namespace ApplicationServices.Validations
             ClassLevelCascadeMode = CascadeMode.Stop;
             RuleLevelCascadeMode = CascadeMode.Stop;
 
-            RuleFor(x => x.checkerConfig.InitiatorBranch)
+            RuleFor(x => x.InitiatorBranch)
                 .NotEmpty()
                 .WithMessage("{InitiatorBranch} is required.");
 
-            RuleFor(x => x.checkerConfig.StatusCode)
+            RuleFor(x =>x.StatusCode)
                 .NotEmpty()
                 .WithMessage("{StatusCode} is required.");
      
