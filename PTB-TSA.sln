@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTB-TSA-BackendService", "PTB-TSA-BackendService\PTB-TSA-BackendService.csproj", "{3A3B1FFA-5FF0-48C4-BE41-3779058EA6B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PTB-TSA-BackendService", "PTB-TSA-BackendService\PTB-TSA-BackendService.csproj", "{3A3B1FFA-5FF0-48C4-BE41-3779058EA6B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{6C5A5342-995B-4EFB-8507-6251B38FF9F0}"
 EndProject
@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{789B0DA1-51B6-46BD-AB09-4611DB92EA88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationServices", "ApplicationServices\ApplicationServices.csproj", "{D84DD7D3-E1BA-4A4A-8563-9539D0EBE6ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationServices", "ApplicationServices\ApplicationServices.csproj", "{D84DD7D3-E1BA-4A4A-8563-9539D0EBE6ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{83FA7709-7AED-4136-AEB2-7A6C2A0E0550}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{83FA7709-7AED-4136-AEB2-7A6C2A0E0550}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{FCDB1D26-2754-4102-A302-989CFCE3EE54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{FCDB1D26-2754-4102-A302-989CFCE3EE54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{D85963DB-DFB1-424F-8BF6-F1CFA54ED1DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{D85963DB-DFB1-424F-8BF6-F1CFA54ED1DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{7BA049A8-5325-4951-B035-B31B53E908EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{7BA049A8-5325-4951-B035-B31B53E908EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

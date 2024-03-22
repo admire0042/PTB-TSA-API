@@ -12,18 +12,18 @@ namespace ApplicationServices.Services
 {
     public class TSAReportService
     {
-        public class InputterService : IInputterService
-        {
-            private readonly IAppDbContext _appDbContext;
-            private readonly ILogger<InputterService> _logger;
-            private readonly IValidator<NewTSAReportDto> _validator;
+        //public class InputterService : IInputterService
+        //{
+        //    private readonly IAppDbContext _appDbContext;
+        //    private readonly ILogger<InputterService> _logger;
+        //    private readonly IValidator<NewTSAReportDto> _validator;
 
-            public InputterService(IAppDbContext appContext, ILogger<InputterService> logger, IValidator<NewTSAReportDto> validator)
-            {
-                _appDbContext = appContext;
-                _logger = logger;
-                _validator = validator;
-            }
-        }
+        //    public InputterService(IAppDbContext appContext, ILogger<InputterService> logger, IValidator<NewTSAReportDto> validator)
+        //    {
+        //        _appDbContext = appContext;
+        //        _logger = logger;
+        //        _validator = validator;
+        //    }
+        //}
     }
 }

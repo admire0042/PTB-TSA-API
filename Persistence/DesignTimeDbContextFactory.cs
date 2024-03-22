@@ -20,6 +20,7 @@ namespace Persistence
             .Build();
             var builder = new DbContextOptionsBuilder<AppDbContext>();
             var connectionString = configuration.GetConnectionString("DBConnection");
+            Console.WriteLine($"Connection String is: {connectionString}");
             builder.UseSqlServer(connectionString);
             return new AppDbContext(builder.Options);
         }

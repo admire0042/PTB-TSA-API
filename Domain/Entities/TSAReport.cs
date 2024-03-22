@@ -54,61 +54,23 @@ namespace Domain.Entities
         public string Initiatedby { get; set; }
         public string InitiatorBranch { get; set; }
         public DateTime? InitiatedDate { get; set; }
-        public string? Authorizedby { get; set; }
-        public string? AuthorizerComment { get; set; }
+        public string Authorizedby { get; set; }
+        public string AuthorizerComment { get; set; }
         public bool? IsAuthorized { get; set; } = false;
         public DateTime? AuthorizedDate { get; set; }
         public bool? IsSuperAuthorized { get; set; } = false;
-        public string? SuperAuthorizerComment { get; set; }
-        public string? SuperAuthorizedby { get; set; }
+        public string SuperAuthorizerComment { get; set; }
+        public string SuperAuthorizedby { get; set; }
         public DateTime? SuperAuthorizedDate { get; set; }
-        //public MakerCheckerConfig checkerConfig { get; set; }
 
-        public static TSAReport Create(TSAReport report)
-        {
-            return new TSAReport
-            {
-                RequestId = report.RequestId,
-                BankId = report.BankId,
-                UniqueReference = report.UniqueReference,
-                BankBranchId = report.BankBranchId,
-                BatchId = report.BatchId,
-                BranchPhoneNumber = report.BranchPhoneNumber,
-                Bvn = report.Bvn,
-                CbnAcct = report.CbnAcct,
-                Channel = report.Channel,
-                CollectedAmount = report.CollectedAmount,
-                Currency = report.Currency,
-                CustomerAccount = report.CustomerAccount,
-                CustomerName = report.CustomerName,
-                CustomerEmail = report.CustomerEmail,
-                CustomerPhoneNumber = report.CustomerPhoneNumber,
-                CustomerTin = report.CustomerTin,
-                Fee = report.Fee,
-                FeedType = report.FeedType,
-                GifmisCode = report.GifmisCode,
-                ItemCode = report.ItemCode,
-                ItemName = report.ItemName,
-                LocationCode = report.LocationCode,
-                LocationName = report.LocationName,
-                MdaCode = report.MdaCode,
-                MdaName = report.MdaName,
-                NarrationDescription = report.NarrationDescription,
-                Date = report.Date,
-                PsspCode = report.PsspCode,
-                PsspName = report.PsspName,
-                RemittedAmount = report.RemittedAmount,
-                RequestedAmount = report.RequestedAmount,
-                SessionId = report.SessionId,
-                SettlementRef = report.SettlementRef,
-                TsaPcCodename = report.TsaPcCodename,
-                TsaPcCoderef = report.TsaPcCoderef,
-                ValueDate = report.ValueDate,
-                Payer = report.Payer,
-                TransmittedDate = report.TransmittedDate,
-                //checkerConfig = report.checkerConfig
-            };
-        }
+        public string Rejectedby { get; set; }
+        public bool? IsRejected { get; set; } = false;
+        public DateTime? RejectionDate { get; set; }
+        public string SuperRejectedby { get; set; }
+        public bool? IsSuperRejected { get; set; } = false;
+        public DateTime? SuperRejectionDate { get; set; }
+        public string NibbsStatus { get; set; }
+        public DateTime? DateSentToNibbs { get; set; }
 
     }
 }

@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sarah.omoike\\.nuget\\packages\\": {}
+    "C:\\Users\\Olusoji.Adejinmi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\MyProjs\\AZURE\\TSAProject\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\sarah.omoike\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\obj\\",
+      "projectPath": "C:\\MyProjs\\AZURE\\TSAProject\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\Olusoji.Adejinmi\\.nuget\\packages\\",
+      "outputPath": "C:\\MyProjs\\AZURE\\TSAProject\\Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\sarah.omoike\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Olusoji.Adejinmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

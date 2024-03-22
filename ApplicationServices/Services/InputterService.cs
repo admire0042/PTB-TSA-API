@@ -1,7 +1,11 @@
-﻿using ApplicationServices.DTOs;
+﻿using ApplicationServices.Const;
+using ApplicationServices.DTOs;
 using ApplicationServices.Interfaces;
+using AutoMapper;
 using Domain.Entities;
 using FluentValidation;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Shared.BaseResponse;
 using System;
@@ -17,24 +21,40 @@ namespace ApplicationServices.Services
     {
         private readonly IAppDbContext _appDbContext;
         private readonly ILogger<InputterService> logger;
-        private readonly IValidator<NewTSAReportDto> validator; 
+        private readonly IValidator<NewTSAReportDto> validator;
+        private readonly IMapper _mapper;
+        private readonly IConfiguration _configuration;
 
-        public InputterService(IAppDbContext appContext, ILogger<InputterService> _logger, IValidator<NewTSAReportDto> _validator)
+        public InputterService(IAppDbContext appContext, ILogger<InputterService> _logger, IValidator<NewTSAReportDto> _validator, IMapper mapper, IConfiguration configuration)
         {
-            _appDbContext= appContext;
+            _appDbContext = appContext;
             logger = _logger;
             validator = _validator;
+            _mapper = mapper;
+            _configuration = configuration;
         }
-
-
         public async Task<Result> CreateProduct(NewTSAReportDto model, CancellationToken cancellation)
         {
             logger.LogInformation("Create TSA Report request initiated...");
             await validator.ValidateAndThrowAsync(model, cancellation);
+            var cbnCode = _configuration["CbnCode"];
+            var feedType = _configuration["FeedType"];
+            string uniqueReference = "SYS"+CodeFramework.GenerateNumericTransactionCodes(17);
+            string batchId = "SYS" + CodeFramework.GenerateNumericTransactionCodes(17);
+            string bankBranchId = cbnCode + CodeFramework.GenerateNumericTransactionCodes(7);
+            string bankId = cbnCode;
 
-            var newReport = TSAReport.Create(model);
+            var entity = _mapper.Map<TSAReport>(model);
 
-            await _appDbContext.TSAReports.AddAsync(newReport, cancellation);
+            //var newReport = TSAReport.Create(entity);
+            entity.UniqueReference = uniqueReference;
+            entity.BatchId = batchId;
+            entity.BankBranchId = bankBranchId;
+            entity.BankId = bankId;
+            entity.FeedType = feedType;
+            entity.InitiatedDate = DateTime.Now;
+
+            await _appDbContext.TSAReports.AddAsync(entity, cancellation);
             var status = await _appDbContext.SaveChangesAsync(cancellation);
 
             if (status < 1)
@@ -45,6 +65,61 @@ namespace ApplicationServices.Services
 
             logger.LogInformation("Successfully created TSA Report");
             return Result.Ok("Successfully created TSA Report");
+        }
+
+
+        public async Task<Result> DeleteProduct(Guid Id)
+        {
+            logger.LogInformation("Deleting TSA Report request initiated...");
+          
+            var entityFromDb = await _appDbContext.TSAReports.FirstOrDefaultAsync(x => x.Id == Id);
+
+            //var newReport = TSAReport.Create(entity);
+            if(entityFromDb == null)
+            {
+                logger.LogWarning("TSA not found", 500);
+                return Result.Fail("TSA Report not found.");
+            }
+            entityFromDb.IsDeleted = true;
+
+             _appDbContext.TSAReports.Update(entityFromDb);
+            var status = await _appDbContext.SaveChangesAsync();
+
+            if (status < 1)
+            {
+                logger.LogWarning("Error occurred, could not delete report", 500);
+                return Result.Fail("TSA Report not deleted.");
+            }
+
+            logger.LogInformation("Successfully deleted TSA Report");
+            return Result.Ok("Successfully deleted TSA Report");
+        }
+
+        public async Task<Result> EditTsaReport(Guid Id, EditTSAReportDto model)
+        {
+            logger.LogInformation("Editing TSA Report request initiated...");
+
+            var entityFromDb = await _appDbContext.TSAReports.FirstOrDefaultAsync(x => x.Id == Id);
+
+            //var newReport = TSAReport.Create(entity);
+            if (entityFromDb == null)
+            {
+                logger.LogWarning("TSA not found", 500);
+                return Result.Fail("TSA Report not found.");
+            }
+            var entity = _mapper.Map<TSAReport>(model);
+
+            _appDbContext.TSAReports.Update(entity);
+            var status = await _appDbContext.SaveChangesAsync();
+
+            if (status < 1)
+            {
+                logger.LogWarning("Error occurred, could not delete report", 500);
+                return Result.Fail("TSA Report not deleted.");
+            }
+
+            logger.LogInformation("Successfully deleted TSA Report");
+            return Result.Ok("Successfully deleted TSA Report");
         }
     }
 

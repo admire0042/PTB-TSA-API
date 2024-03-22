@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FU2vBk7oVISBZRN9VhGeaPwakMBAvMDIesMACuaN+v6PcdHsbk4HWGBi3m68fp+KYRXVZG05ACOVXEsJJr41Hg==",
+  "dgSpecHash": "3JBCbFCiuK6su8b0Y7ZCT10Z9m2udqqmVgoMdsFjqWGrOWkZSaIpRc67dAClMKiJyVUYtDZj7gCVBECZESM7UA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sarah.omoike\\Desktop\\Projects\\Backend_Projects\\PremiumTrustBank.TSA.BackendService\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\MyProjs\\AZURE\\TSAProject\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

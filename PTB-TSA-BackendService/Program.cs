@@ -1,3 +1,9 @@
+using ApplicationServices.DTOs;
+using ApplicationServices.Interfaces;
+using ApplicationServices.Services;
+using ApplicationServices.Validations;
+using Domain.Entities;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Persistence.DBContexts;
@@ -18,14 +24,23 @@ builder.Services.AddSwaggerGen(c =>
 });
 builder.Services.AddEndpointsApiExplorer();
 
+#region Validators
+builder.Services.AddTransient<IValidator<TSAReport>,TSAReportValidation>();
+builder.Services.AddTransient<IValidator<NewTSAReportDto>, NewTSAReportDtoValidator>();
+builder.Services.AddTransient<IValidator<ApproveTSAByAuthorizerDto>, ApproveTSAByAuthorizerDtoValidator>();
+builder.Services.AddTransient<IValidator<ApproveBySupperAuthorizerDto>, ApproveTSABySuperAuthorizerDtoDtoValidator>();
+builder.Services.AddTransient<IValidator<RejectTSAByAuthorizerDto>, RejectByAuthorizerDtoValidator>();
+builder.Services.AddTransient<IValidator<RejectedBySupperAuthorizerDto>, RejectBySuperAuthorizerDtoValidator>();
+#endregion
 
-var app = builder.Build();
+#region services
+builder.Services.AddTransient<IInputterService, InputterService>();
+builder.Services.AddTransient<IAuthorizerService, AuthorizerService>();
+builder.Services.AddTransient<ISuperAuthorizerService, SuperAuthorizerService>();
+#endregion
 
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "PremiumTrustBank TSA Api");
-    });
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 
 builder.Services.AddCors(options =>
 {
@@ -35,7 +50,7 @@ builder.Services.AddCors(options =>
                                                        .AllowCredentials()
     );
 });
-
+builder.Services.AddScoped<IAppDbContext, AppDbContext>();
 var connectionString = builder.Configuration.GetConnectionString("DBConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
 
@@ -48,6 +63,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         })
          .EnableDetailedErrors());
 
+
+var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "PremiumTrustBank TSA Api");
+});
 
 app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");

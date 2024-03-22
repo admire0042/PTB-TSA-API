@@ -12,8 +12,8 @@ using Persistence.DBContexts;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240311215226_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240321070821_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,62 +40,48 @@ namespace Persistence.Migrations
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("BankBranchId")
-                        .IsRequired()
                         .HasColumnType("varchar(10)");
 
                     b.Property<string>("BankId")
-                        .IsRequired()
                         .HasColumnType("varchar(3)");
 
                     b.Property<string>("BatchId")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("BranchPhoneNumber")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Bvn")
-                        .IsRequired()
                         .HasColumnType("varchar(11)");
 
                     b.Property<string>("CbnAcct")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Channel")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<decimal?>("CollectedAmount")
                         .HasColumnType("DECIMAL(25,2)");
 
                     b.Property<string>("ConfigId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Currency")
-                        .IsRequired()
                         .HasColumnType("varchar(3)");
 
                     b.Property<string>("CustomerAccount")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("CustomerEmail")
-                        .IsRequired()
                         .HasColumnType("varchar(200)");
 
                     b.Property<string>("CustomerName")
-                        .IsRequired()
                         .HasColumnType("varchar(200)");
 
                     b.Property<string>("CustomerPhoneNumber")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("CustomerTin")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<DateTime?>("Date")
@@ -111,22 +97,18 @@ namespace Persistence.Migrations
                         .HasColumnType("DECIMAL(25,2)");
 
                     b.Property<string>("FeedType")
-                        .IsRequired()
                         .HasColumnType("varchar(5)");
 
                     b.Property<string>("GifmisCode")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<DateTime?>("InitiatedDate")
                         .HasColumnType("Date");
 
                     b.Property<string>("Initiatedby")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("InitiatorBranch")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("IsAuthorized")
@@ -139,50 +121,39 @@ namespace Persistence.Migrations
                         .HasColumnType("Bit");
 
                     b.Property<string>("ItemCode")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("ItemName")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("LocationCode")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("LocationName")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("MdaCode")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("MdaName")
-                        .IsRequired()
                         .HasColumnType("varchar(max)");
 
                     b.Property<string>("NarrationDescription")
-                        .IsRequired()
                         .HasColumnType("varchar(200)");
 
                     b.Property<string>("Payer")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("PsspCode")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("PsspName")
-                        .IsRequired()
                         .HasColumnType("varchar(200)");
 
                     b.Property<decimal?>("RemittedAmount")
                         .HasColumnType("DECIMAL(25,2)");
 
                     b.Property<string>("RequestId")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<decimal?>("RequestedAmount")
@@ -192,15 +163,12 @@ namespace Persistence.Migrations
                         .HasColumnType("Int");
 
                     b.Property<string>("SettlementRef")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("StatusCode")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("StatusDescription")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<DateTime?>("SuperAuthorizedDate")
@@ -216,15 +184,12 @@ namespace Persistence.Migrations
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("TsaPcCodename")
-                        .IsRequired()
                         .HasColumnType("varchar(200)");
 
                     b.Property<string>("TsaPcCoderef")
-                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("UniqueReference")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<DateTime?>("ValueDate")
