@@ -5,6 +5,7 @@ using AutoMapper;
 using Domain.Entities;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Shared.BaseResponse;
@@ -14,6 +15,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace ApplicationServices.Services
 {
@@ -121,8 +123,45 @@ namespace ApplicationServices.Services
             logger.LogInformation("Successfully deleted TSA Report");
             return Result.Ok("Successfully deleted TSA Report");
         }
+
+        public async Task<Result> GetTsaReportByDateRange(DateTime fromDate, DateTime toDate)
+        {
+            var dd = fromDate.Date;
+            var query = _appDbContext.TSAReports.AsNoTracking()
+            .Where(c => !c.IsDeleted && c.DateAdded.Date >= fromDate.Date && c.DateAdded.Date <= toDate.Date)
+            .OrderByDescending(c => c.DateAdded).ToList();
+
+            var entity = _mapper.Map<List<GetTSADto>>(query);
+            //var newReport = TSAReport.Create(entity);
+            if (entity.Count == 0)
+            {
+                logger.LogWarning("TSA not found", 500);
+                return Result.Fail("TSA Report not found.");
+            }
+
+            logger.LogInformation("Successfully retrieved TSA Report");
+            return Result.Ok(entity, "Successfully retrieved TSA Report");
+        }
+
+        public async Task<Result> GetTsaReportByStatusCode(string statusCode)
+        {
+            var query = _appDbContext.TSAReports.AsNoTracking()
+            .Where(c => statusCode.Contains(c.StatusCode))
+            .OrderByDescending(c => c.DateAdded).ToList();
+
+            var entity = _mapper.Map<List<GetTSADto>>(query);
+            //var newReport = TSAReport.Create(entity);
+            if (entity.Count == 0)
+            {
+                logger.LogWarning("TSA not found", 500);
+                return Result.Fail("TSA Report not found.");
+            }
+
+            logger.LogInformation("Successfully retrieved TSA Report");
+            return Result.Ok(entity, "Successfully retrieved TSA Report");
+        }
     }
 
-   
+   .
 
 }

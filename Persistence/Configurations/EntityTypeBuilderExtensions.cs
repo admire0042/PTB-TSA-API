@@ -11,7 +11,7 @@ namespace Persistence.Configurations
             builder.HasKey(x => x.Id);
             builder.HasQueryFilter(x => !x.IsDeleted);
 
-            builder.Property(x => x.DateAdded).HasColumnType("DateTime2").IsRequired(false);
+            builder.Property(x => x.DateAdded).HasColumnType("DateTime2").IsRequired(true);
             builder.Property(x => x.DateModified).HasColumnType("DateTime2").IsRequired(false);
         }
     }

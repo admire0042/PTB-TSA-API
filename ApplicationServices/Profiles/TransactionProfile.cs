@@ -60,6 +60,8 @@ namespace ApplicationServices.Profiles
             .ForMember(dest => dest.SuperRejectedby, opt => opt.MapFrom(src => src.SuperRejectedby))
             .ForMember(dest => dest.SuperAuthorizerComment, opt => opt.MapFrom(src => src.SuperAuthorizerComment));
 
+            CreateMap<TSAReport, GetTSADto>();
+
         }
     }
 }

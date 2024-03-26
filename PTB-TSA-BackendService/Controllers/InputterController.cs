@@ -49,5 +49,27 @@ namespace PTB_TSA_BackendService.Controllers
                 return Ok(response);
             return NoContent();
         }
+
+        [HttpGet]
+        [Route("GetTSAByDate/{fromDate}/{toDate}")]
+        public async Task<IActionResult> GetTSAByDateRange(DateTime fromDate, DateTime toDate)
+        {
+            var response = await _inputter.GetTsaReportByDateRange(fromDate, toDate);
+
+            if (response != null)
+                return Ok(response);
+            return NoContent();
+        }
+
+        [HttpGet]
+        [Route("GetTSAStatusCode/{statusCode}")]
+        public async Task<IActionResult> GetTSAByStatusCode(string statusCode)
+        {
+            var response = await _inputter.GetTsaReportByStatusCode(statusCode);
+
+            if (response != null)
+                return Ok(response);
+            return NoContent();
+        }
     }
 }

@@ -13,5 +13,7 @@ namespace ApplicationServices.Interfaces
         Task<Result> CreateProduct(NewTSAReportDto model, CancellationToken cancellation);
         Task<Result> EditTsaReport(Guid Id, EditTSAReportDto model);
         Task<Result> DeleteProduct(Guid Id);
+        Task<Result> GetTsaReportByDateRange(DateTime fromDate, DateTime toDate);
+        Task<Result> GetTsaReportByStatusCode(string statusCode);
     }
 }
