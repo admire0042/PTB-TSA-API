@@ -46,6 +46,9 @@ namespace Persistence.Migrations
                     b.Property<string>("BatchId")
                         .HasColumnType("varchar(20)");
 
+                    b.Property<string>("BranchCode")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("BranchPhoneNumber")
                         .HasColumnType("varchar(20)");
 

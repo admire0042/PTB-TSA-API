@@ -37,6 +37,8 @@ builder.Services.AddTransient<IValidator<RejectedBySupperAuthorizerDto>, RejectB
 builder.Services.AddTransient<IInputterService, InputterService>();
 builder.Services.AddTransient<IAuthorizerService, AuthorizerService>();
 builder.Services.AddTransient<ISuperAuthorizerService, SuperAuthorizerService>();
+builder.Services.AddTransient<ITSAReport, TSAReportService>();
+
 #endregion
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

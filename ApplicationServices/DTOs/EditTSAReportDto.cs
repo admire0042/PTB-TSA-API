@@ -48,6 +48,7 @@ namespace ApplicationServices.DTOs
         public string StatusCode { get; set; }
         public string Initiatedby { get; set; }
         public string InitiatorBranch { get; set; }
+        public string UpdatedBy { get; set; }
     }
 }
 

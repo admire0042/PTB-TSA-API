@@ -28,48 +28,7 @@ namespace PTB_TSA_BackendService.Controllers
             return NoContent();
         }
 
-        [HttpPut]
-        [Route("UpdateTSA/{Id}")]
-        public async Task<IActionResult> UpdateTSA(string Id,EditTSAReportDto tSAReportDto)
-        {
-            var response = await _inputter.EditTsaReport(Guid.Parse(Id), tSAReportDto);
-
-            if (response != null)
-                return Ok(response);
-            return NoContent();
-        }
-
-        [HttpDelete]
-        [Route("deleteTSA/{Id}")]
-        public async Task<IActionResult> DeleteProduct(string Id)
-        {
-            var response = await _inputter.DeleteProduct(Guid.Parse(Id));
-
-            if (response != null)
-                return Ok(response);
-            return NoContent();
-        }
-
-        [HttpGet]
-        [Route("GetTSAByDate/{fromDate}/{toDate}")]
-        public async Task<IActionResult> GetTSAByDateRange(DateTime fromDate, DateTime toDate)
-        {
-            var response = await _inputter.GetTsaReportByDateRange(fromDate, toDate);
-
-            if (response != null)
-                return Ok(response);
-            return NoContent();
-        }
-
-        [HttpGet]
-        [Route("GetTSAStatusCode/{statusCode}")]
-        public async Task<IActionResult> GetTSAByStatusCode(string statusCode)
-        {
-            var response = await _inputter.GetTsaReportByStatusCode(statusCode);
-
-            if (response != null)
-                return Ok(response);
-            return NoContent();
-        }
+        
+       
     }
 }

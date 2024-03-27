@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PTB-TSA-BackendService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae608e26bea90bd7da90f07012f09090e510bba2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4b7811b6aeca8dfc7c0adb06d1bfe989fbedf88")]
 [assembly: System.Reflection.AssemblyProductAttribute("PTB-TSA-BackendService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PTB-TSA-BackendService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

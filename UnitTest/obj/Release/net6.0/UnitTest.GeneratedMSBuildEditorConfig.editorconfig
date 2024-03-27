@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UnitTest
-build_property.ProjectDir = C:\Users\sarah.omoike\Desktop\Projects\Backend_Projects\PremiumTrustBank.TSA.BackendService\UnitTest\
+build_property.ProjectDir = C:\MyProjs\AZURE\TSAProject\UnitTest\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

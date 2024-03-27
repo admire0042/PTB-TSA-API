@@ -62,7 +62,7 @@ namespace Domain.Entities
         public string SuperAuthorizerComment { get; set; }
         public string SuperAuthorizedby { get; set; }
         public DateTime? SuperAuthorizedDate { get; set; }
-
+        public string BranchCode { get; set; }
         public string Rejectedby { get; set; }
         public bool? IsRejected { get; set; } = false;
         public DateTime? RejectionDate { get; set; }
@@ -71,6 +71,8 @@ namespace Domain.Entities
         public DateTime? SuperRejectionDate { get; set; }
         public string NibbsStatus { get; set; }
         public DateTime? DateSentToNibbs { get; set; }
+        public string DeletedBy { get; set; }
+        public string UpdatedBy { get; set; }
 
     }
 }
