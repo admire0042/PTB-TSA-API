@@ -1,7 +1,9 @@
-﻿using ApplicationServices.DTOs;
+﻿using ApplicationServices.Const;
+using ApplicationServices.DTOs;
 using ApplicationServices.Enum;
 using AutoMapper;
 using Domain.Entities;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,17 +16,16 @@ namespace ApplicationServices.Profiles
     {
         public TransactionProfile()
         {
-           
 
             CreateMap<NewTSAReportDto, TSAReport>()
-                .ForMember(dest => dest.payColDate, opt => opt.MapFrom(src => src.Date));
-
-            CreateMap<TSAReport, NewTSAReportDto>()
-                .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.payColDate))
-                .ReverseMap();
+                .ForMember(dest => dest.payColDate, opt => opt.MapFrom(src => DateTime.Now))
+                .ForMember(dest => dest.UniqueReference, opt => opt.MapFrom(src => "SYS" + CodeFramework.GenerateNumericTransactionCodes(17)))
+                .ForMember(dest => dest.SettlementRef, opt => opt.MapFrom(src => CodeFramework.GenerateNumericTransactionCodes(17)))
+                .ForMember(dest => dest.BatchId, opt => opt.MapFrom(src => "SYS" + CodeFramework.GenerateNumericTransactionCodes(17))
+                );
 
             CreateMap<EditTSAReportDto, TSAReport>().ReverseMap();
-            //CreateMap<ApproveTSAByAuthorizerDto, TSAReport>().ReverseMap();
+
             CreateMap<ApproveBySupperAuthorizerDto, TSAReport>().ReverseMap();
 
             CreateMap<ApproveTSAByAuthorizerDto, TSAReport>()
@@ -61,7 +62,6 @@ namespace ApplicationServices.Profiles
             .ForMember(dest => dest.SuperAuthorizerComment, opt => opt.MapFrom(src => src.SuperAuthorizerComment));
 
             CreateMap<TSAReport, GetTSADto>();
-
         }
     }
 }

@@ -20,26 +20,11 @@ namespace ApplicationServices.Validations
                 .NotEmpty()
                 .WithMessage("{InitiatorBranch} is required.");
 
-            RuleFor(x => x.StatusCode)
-                .NotEmpty()
-                .WithMessage("{StatusCode} is required.");
-
             RuleFor(x => x.Channel)
                .NotEmpty()
                .WithMessage("{Channel} is required.")
                .MaximumLength(10)
                .WithMessage("{Channel} has minimum range.");
-
-
-            RuleFor(x => x.SessionId)
-               .NotEmpty()
-               .Must(x => x == 1)
-               .WithMessage("{SessionId} is required with a single digit 0 or 1.");
-
-            RuleFor(x => x.CbnAcct)
-               .NotEmpty()
-               .WithMessage("{CbnAcct} is required.");
-
 
             RuleFor(x => x.Bvn)
                   .MinimumLength(11)
@@ -52,9 +37,7 @@ namespace ApplicationServices.Validations
                 .WithMessage("{CollectedAmount} is required.");
 
 
-            RuleFor(x => x.Currency)
-               .NotEmpty()
-               .WithMessage("{Currency} is required.");
+           
 
             RuleFor(x => x.CustomerName)
                 .NotEmpty()
@@ -88,13 +71,7 @@ namespace ApplicationServices.Validations
               .NotEmpty()
               .WithMessage("{RemittedAmount} is required.");
 
-            RuleFor(x => x.SessionId)
-                .NotEmpty()
-                .WithMessage("{SessionId} is required.");
-
-            RuleFor(x => x.SettlementRef)
-              .NotEmpty()
-              .WithMessage("{SettlementRef} is required.");
+           
 
             RuleFor(x => x.TsaPcCodename)
                .NotEmpty()

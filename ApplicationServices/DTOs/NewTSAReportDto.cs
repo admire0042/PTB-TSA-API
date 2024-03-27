@@ -14,10 +14,10 @@ namespace ApplicationServices.DTOs
         public string RequestId { get; set; }
         public string BranchPhoneNumber { get; set; }
         public string Bvn { get; set; }
-        public string CbnAcct { get; set; }
+        //public string CbnAcct { get; set; }
         public string Channel { get; set; }
         public decimal? CollectedAmount { get; set; }
-        public string Currency { get; set; }
+        //public string Currency { get; set; }
         public string CustomerAccount { get; set; }
         public string CustomerName { get; set; }
         public string CustomerEmail { get; set; }
@@ -33,19 +33,19 @@ namespace ApplicationServices.DTOs
         public string MdaCode { get; set; }
         public string MdaName { get; set; }
         public string NarrationDescription { get; set; }
-        public DateTime? Date { get; set; }
+        //public DateTime? Date { get; set; }
         public string PsspCode { get; set; }
         public string PsspName { get; set; }
         public decimal? RemittedAmount { get; set; }
         public decimal? RequestedAmount { get; set; }
-        public int? SessionId { get; set; }
-        public string SettlementRef { get; set; }
+        //public int? SessionId { get; set; }
+       // public string SettlementRef { get; set; }
         public string TsaPcCodename { get; set; }
         public string TsaPcCoderef { get; set; }
         public DateTime? ValueDate { get; set; }
         public string Payer { get; set; }
         public DateTime? TransmittedDate { get; set; }
-        public string StatusCode { get; set; }
+        //public string StatusCode { get; set; }
         public string Initiatedby { get; set; }
         public string InitiatorBranch { get; set; }
         public string BranchCode { get; set; }

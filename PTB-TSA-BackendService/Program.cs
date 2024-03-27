@@ -1,10 +1,12 @@
 using ApplicationServices.DTOs;
 using ApplicationServices.Interfaces;
+using ApplicationServices.Profiles;
 using ApplicationServices.Services;
 using ApplicationServices.Validations;
 using Domain.Entities;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
 using Persistence.DBContexts;
 using System;
@@ -38,6 +40,9 @@ builder.Services.AddTransient<IInputterService, InputterService>();
 builder.Services.AddTransient<IAuthorizerService, AuthorizerService>();
 builder.Services.AddTransient<ISuperAuthorizerService, SuperAuthorizerService>();
 builder.Services.AddTransient<ITSAReport, TSAReportService>();
+
+// Register TransactionProfile with IConfiguration dependency
+builder.Services.AddTransient<TransactionProfile>();
 
 #endregion
 

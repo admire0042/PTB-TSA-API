@@ -41,16 +41,34 @@ namespace ApplicationServices.Services
             await validator.ValidateAndThrowAsync(model, cancellation);
             var cbnCode = _configuration["CbnCode"];
             var feedType = _configuration["FeedType"];
-            string uniqueReference = "SYS"+CodeFramework.GenerateNumericTransactionCodes(17);
-            string batchId = "SYS" + CodeFramework.GenerateNumericTransactionCodes(17);
+            var cbnAcct = _configuration["cbnAcct"];
+            var channel = _configuration["channel"];
+            var currency = _configuration["currency"];
             string bankBranchId = cbnCode + CodeFramework.GenerateNumericTransactionCodes(7);
             string bankId = cbnCode;
 
             var entity = _mapper.Map<TSAReport>(model);
 
-            //var newReport = TSAReport.Create(entity);
-            entity.UniqueReference = uniqueReference;
-            entity.BatchId = batchId;
+            DateTime startTimeRange1 = DateTime.Today.AddHours(11);
+            DateTime endTimeRange1 = DateTime.Today.AddHours(16).AddMinutes(59).AddSeconds(59);
+            DateTime startTimeRange2 = DateTime.Today.AddHours(17);
+            DateTime endTimeRange2 = DateTime.Today.AddDays(1).AddHours(10).AddMinutes(59).AddSeconds(59);
+
+
+            DateTime currentTime = DateTime.Now;
+
+            if ((currentTime >= startTimeRange1 && currentTime <= endTimeRange1) ||
+                (currentTime >= startTimeRange2 || currentTime <= endTimeRange2))
+            {
+                if (currentTime >= startTimeRange1 && currentTime <= endTimeRange1)
+                    entity.SessionId = 0;
+                else
+                    entity.SessionId = 1;
+            }
+            entity.CbnAcct = cbnAcct;
+            entity.Channel = channel;
+            entity.Currency = currency;
+
             entity.BankBranchId = bankBranchId;
             entity.BankId = bankId;
             entity.FeedType = feedType;
@@ -69,7 +87,4 @@ namespace ApplicationServices.Services
             return Result.Ok("Successfully created TSA Report");
         }
     }
-
-   
-
 }
